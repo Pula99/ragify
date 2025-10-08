@@ -1,0 +1,22 @@
+[build-system]
+requires = ["setuptools", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "ragify"
+version = "0.1.0"
+description = "A modular and easy-to-use RAG configuration framework using the Adapter pattern."
+readme = "README.md"
+authors = [{ name="Kusal", email="your_email@example.com" }]
+license = { text = "MIT" }
+dependencies = [
+    "openai>=1.0.0",
+    "chromadb>=0.4.0",
+    "faiss-cpu>=1.7.0",
+    "pytest>=7.0.0"
+]
+requires-python = ">=3.9"
+keywords = ["rag", "adapter", "llm", "ai", "retrieval-augmented-generation"]
+
+[project.urls]
+Homepage = "https://github.com/yourusername/ragify"
