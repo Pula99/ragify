@@ -1,2 +1,1 @@
-# ragify
-
+RagForge is a Python library designed to simplify and accelerate the creation of Retrieval-Augmented Generation (RAG) pipelines. It provides a plug-and-play configuration system, allowing developers to easily integrate retrievers, embeddings, LLMs, and knowledge sources into a seamless RAG workflow without building everything from scratch.
