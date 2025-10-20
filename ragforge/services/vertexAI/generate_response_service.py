@@ -6,10 +6,10 @@ from vertexai.generative_models import GenerationConfig
 logging.basicConfig(level=logging.INFO)
 logger = logging.getLogger(__name__)
 
-def generate_response(context: str, query: str, prompt: str, config: dict):
+def generate_response(context: str, query: str,  config: dict):
 
     prompt = f"""
-        {prompt}    
+        
         Context: {context}
         Question: {query}    
     """

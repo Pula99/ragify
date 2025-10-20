@@ -3,13 +3,7 @@ from services.retriever_service import RetrieverService
 from utils.logger import get_logger
 
 logger = get_logger(__name__)
-
 class RAGPipeline:
-    """
-    Orchestrates the end-to-end RAG process:
-    - Retrieve relevant documents
-    - Generate an AI response using LLM
-    """
     def __init__(self, llm_service=None, retriever_service=None):
         self.llm_service = llm_service or LLMService()
         self.retriever_service = retriever_service or RetrieverService()

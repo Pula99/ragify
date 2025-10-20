@@ -1,14 +1,16 @@
 import logging
-from langchain.embeddings import VertexAIEmbeddings
+import os
+from langchain_google_vertexai import VertexAIEmbeddings
+from dotenv import load_dotenv
 
 logging.basicConfig(level=logging.INFO)
 logger = logging.getLogger(__name__)
 
-embedder = VertexAIEmbeddings(model_name="text-embedding-004")
-logger.info("VertexAI embedder initialized with model: text-embedding-004")
-
 async def embed_text(text: str) -> list[float]:
     try:
+        load_dotenv()
+        vertex_text_embedding_model_name=os.getenv("VERTEX_TEXT_EMBEDDING_MODEL")
+        embedder = VertexAIEmbeddings(model_name=vertex_text_embedding_model_name)
         embedding = embedder.embed_query(text)
         return embedding
     except Exception as e:
